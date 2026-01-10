@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.0] - 2026-01-10
+
+### Changed
+1. 更新插件结构 (Samples):
+    - Editor Tool
+    - Frameworks & Architecture
+    - Data Management
+    - XR
+
+
 ## [1.1.1] - 2026-01-10
 
 ### Added

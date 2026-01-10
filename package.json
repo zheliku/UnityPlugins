@@ -1,6 +1,6 @@
 {
     "name": "com.zheliku.unityplugins",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "displayName": "Unity Plugins",
     "description": "常用插件的集合库",
     "unity": "2021.3",
@@ -10,39 +10,24 @@
     },
     "samples": [
         {
-            "displayName": "Odin Inspector v4.0.1.2",
-            "description": "更强大的属性绘制器 Odin Inspector",
-            "path": "Samples~/Odin Inspector"
+            "displayName": "01. [Editor Tool]",
+            "description": "编辑器增强\n1. Odin Inspector,\n2. Console Pro\n3. v~ 系列效率工具",
+            "path": "Samples~/Editor"
         },
         {
-            "displayName": "QFramework v1.0.236",
-            "description": "更强大的框架 QFramework",
-            "path": "Samples~/QFramework"
+            "displayName": "02. [Frameworks & Architecture]",
+            "description": "架构与事件\n1. QFramework\n2. Events Pro",
+            "path": "Samples~/Frameworks & Architecture"
         },
         {
-            "displayName": "Console Pro v3.980",
-            "description": "更好的控制台工具",
-            "path": "Samples~/Console Pro"
+            "displayName": "03. [Data Management]",
+            "description": "数据管理\n1. BG Database",
+            "path": "Samples~/Data"
         },
         {
-            "displayName": "BG Database v1.9.3",
-            "description": "更强大的数据库工具",
-            "path": "Samples~/BG Database"
-        },
-        {
-            "displayName": "Auto Hand v4.0.4",
-            "description": "VR交互插件 Auto Hand",
-            "path": "Samples~/Auto Hand"
-        },
-        {
-            "displayName": "Events Pro v1.1.0",
-            "description": "更强大的事件系统 Events Pro",
-            "path": "Samples~/Events Pro"
-        },
-        {
-            "displayName": "v~ tools",
-            "description": "- vFavorites v2.1.14：更强大的收藏夹工具\n- vFolders v2.1.13：更强大的文件夹管理工具\n- vHierachy 2 v2.1.8： 更强大的层级视图工具\n- vInspector v2.1.17：更强大的检视面板工具",
-            "path": "Samples~/v~ tools"
+            "displayName": "04. [XR]",
+            "description": "XR 交互\n1. Auto Hand",
+            "path": "Samples~/XR"
         }
     ]
 }
