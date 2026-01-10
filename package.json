@@ -1,6 +1,6 @@
 {
     "name": "com.zheliku.unityplugins",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "displayName": "Unity Plugins",
     "description": "常用插件的集合库",
     "unity": "2021.3",
@@ -21,7 +21,7 @@
         },
         {
             "displayName": "03. [Data Management]",
-            "description": "数据管理\n1. BG Database",
+            "description": "数据管理\n1. BG Database\n2. Asset Inventory 3",
             "path": "Samples~/Data Management"
         },
         {
