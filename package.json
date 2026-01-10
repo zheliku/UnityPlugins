@@ -11,7 +11,7 @@
     "samples": [
         {
             "displayName": "01. [Editor Tool]",
-            "description": "编辑器增强\n1. Odin Inspector\n2. Console Pro\n3. v~ 系列效率工具\n\tvFavorites 2\n\tvFolders 2\n\tvHierarchy 2\n\tvInspector 2",
+            "description": "编辑器增强\n1. Odin Inspector\n2. Console Pro\n3. v系列效率工具：vFavorites 2；vFolders 2；vHierarchy 2；vInspector 2",
             "path": "Samples~/Editor Tool"
         },
         {
