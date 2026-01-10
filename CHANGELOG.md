@@ -1,9 +1,13 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+## [1.1.1] - 2026-01-10
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+### Added
+1. 添加插件示例 (Samples):
+    - v~ tools: 包含多个实用的v系列工具插件。
+        - vFavorites v2.1.14: 更强大的收藏夹工具。
+        - vFolders v2.1.13: 更强大的文件夹管理工具。
+        - vInspector v2.1.17: 更强大的检视面板工具。
 
 ## [1.1.0] - 2026-01-10
 

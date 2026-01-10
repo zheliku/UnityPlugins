@@ -1,6 +1,6 @@
 {
     "name": "com.zheliku.unityplugins",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "displayName": "Unity Plugins",
     "description": "常用插件的集合库",
     "unity": "2021.3",
@@ -40,9 +40,9 @@
             "path": "Samples~/Events Pro"
         },
         {
-            "displayName": "vHierachy 2 v2.1.8",
-            "description": "更强大的层级视图工具 vHierachy 2",
-            "path": "Samples~/vHierachy 2"
+            "displayName": "v~ tools",
+            "description": "- vFavorites v2.1.14：更强大的收藏夹工具\n- vFolders v2.1.13：更强大的文件夹管理工具\n- vHierachy 2 v2.1.8： 更强大的层级视图工具\n- vInspector v2.1.17：更强大的检视面板工具",
+            "path": "Samples~/v~ tools"
         }
     ]
 }
