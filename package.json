@@ -12,7 +12,7 @@
         {
             "displayName": "01. [Editor Tool]",
             "description": "编辑器增强\n1. Odin Inspector,\n2. Console Pro\n3. v~ 系列效率工具",
-            "path": "Samples~/Editor"
+            "path": "Samples~/Editor Tool"
         },
         {
             "displayName": "02. [Frameworks & Architecture]",
@@ -22,7 +22,7 @@
         {
             "displayName": "03. [Data Management]",
             "description": "数据管理\n1. BG Database",
-            "path": "Samples~/Data"
+            "path": "Samples~/Data Management"
         },
         {
             "displayName": "04. [XR]",
