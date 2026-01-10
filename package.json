@@ -1,0 +1,43 @@
+{
+    "name": "com.zheliku.unityplugins",
+    "version": "1.0.0",
+    "displayName": "Unity Plugins",
+    "description": "常用插件的集合库",
+    "unity": "2021.3",
+    "author": {
+        "name": "zheliku",
+        "email": "zheliku25@gmail.com"
+    },
+    "samples": [
+        {
+            "displayName": "Odin Inspector v4.0.1.2",
+            "description": "Odin Inspector v",
+            "path": "Samples~/Odin Inspector"
+        },
+        {
+            "displayName": "QFramework v1.0.236",
+            "description": "QFramework v",
+            "path": "Samples~/QFramework"
+        },
+        {
+            "displayName": "Console Pro v3.980",
+            "description": "更好的控制台工具",
+            "path": "Samples~/Console Pro"
+        },
+        {
+            "displayName": "BG Database v1.9.3",
+            "description": "更强大的数据库工具",
+            "path": "Samples~/BG Database"
+        },
+        {
+            "displayName": "Auto Hand v4.0.4",
+            "description": "VR交互插件 Auto Hand",
+            "path": "Samples~/Auto Hand"
+        },
+        {
+            "displayName": "Events Pro v1.1.0",
+            "description": "更强大的事件系统 Events Pro",
+            "path": "Samples~/Events Pro"
+        }
+    ]
+}
