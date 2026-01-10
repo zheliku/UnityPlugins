@@ -1,6 +1,6 @@
 {
     "name": "com.zheliku.unityplugins",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "displayName": "Unity Plugins",
     "description": "常用插件的集合库",
     "unity": "2021.3",
@@ -38,6 +38,11 @@
             "displayName": "Events Pro v1.1.0",
             "description": "更强大的事件系统 Events Pro",
             "path": "Samples~/Events Pro"
+        },
+        {
+            "displayName": "vHierachy 2 v2.1.8",
+            "description": "更强大的层级视图工具 vHierachy 2",
+            "path": "Samples~/vHierachy 2"
         }
     ]
 }
