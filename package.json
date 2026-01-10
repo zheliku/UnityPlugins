@@ -11,12 +11,12 @@
     "samples": [
         {
             "displayName": "Odin Inspector v4.0.1.2",
-            "description": "Odin Inspector v",
+            "description": "更强大的属性绘制器 Odin Inspector",
             "path": "Samples~/Odin Inspector"
         },
         {
             "displayName": "QFramework v1.0.236",
-            "description": "QFramework v",
+            "description": "更强大的框架 QFramework",
             "path": "Samples~/QFramework"
         },
         {
