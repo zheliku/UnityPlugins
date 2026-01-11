@@ -1,3 +1,5 @@
+#if QFRAMEWORK_RESKIT && ADDRESSABLES_SUPPORT
+
 using System;
 using UnityEngine;
 
@@ -54,3 +56,5 @@ namespace QFramework
         }
     }
 }
+
+#endif
