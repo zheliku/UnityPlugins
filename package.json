@@ -13,22 +13,22 @@
     },
     "samples": [
         {
-            "displayName": "01. [Editor Tool]",
+            "displayName": "01. Editor Tool",
             "description": "编辑器增强\n1. Odin Inspector\n2. Console Pro\n3. v系列效率工具：vFavorites 2；vFolders 2；vHierarchy 2；vInspector 2\n4. Script Inspector 3",
             "path": "Samples~/Editor Tool"
         },
         {
-            "displayName": "02. [Frameworks & Architecture]",
+            "displayName": "02. Frameworks & Architecture",
             "description": "架构与事件\n1. QFramework\n2. Events Pro",
             "path": "Samples~/Frameworks & Architecture"
         },
         {
-            "displayName": "03. [Data Management]",
+            "displayName": "03. Data Management",
             "description": "数据管理\n1. BG Database\n2. Asset Inventory 3",
             "path": "Samples~/Data Management"
         },
         {
-            "displayName": "04. [XR]",
+            "displayName": "04. XR",
             "description": "XR 交互\n1. Auto Hand",
             "path": "Samples~/XR"
         }
