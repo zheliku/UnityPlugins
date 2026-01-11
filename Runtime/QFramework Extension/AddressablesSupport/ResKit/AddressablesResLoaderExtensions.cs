@@ -96,8 +96,7 @@ namespace QFramework
 
             // 使用 LoadSceneParameters 和 IResourceLocation 加载场景
             var loadSceneParameters = new LoadSceneParameters(mode, physicsMode);
-            var handle = Addressables.LoadSceneAsync(location, loadSceneParameters,
-                SceneReleaseMode.ReleaseSceneWhenSceneUnloaded, activateOnLoad: true);
+            var handle = Addressables.LoadSceneAsync(location, loadSceneParameters, activateOnLoad: true);
             var sceneInstance = handle.WaitForCompletion();
 
             // WaitForCompletion 后检查状态
@@ -165,8 +164,7 @@ namespace QFramework
 
                 // 使用 LoadSceneParameters 和 IResourceLocation 加载场景
                 var loadSceneParameters = new LoadSceneParameters(loadSceneMode, physicsMode);
-                var handle = Addressables.LoadSceneAsync(location, loadSceneParameters,
-                    SceneReleaseMode.ReleaseSceneWhenSceneUnloaded, activateOnLoad: true);
+                var handle = Addressables.LoadSceneAsync(location, loadSceneParameters, activateOnLoad: true);
 
                 // 更新 Res 的场景句柄
                 singleRes.SetSceneHandle(handle);
