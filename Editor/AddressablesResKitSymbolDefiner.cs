@@ -20,7 +20,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace QFramework.Editor
+namespace UnityPlugins.Editor
 {
     /// <summary>
     /// 自动添加条件编译符号

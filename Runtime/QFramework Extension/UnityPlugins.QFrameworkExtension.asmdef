@@ -6,7 +6,9 @@
         "QFramework.CoreKit",
         "ResKit",
         "Unity.Addressables",
-        "Unity.ResourceManager"
+        "Unity.ResourceManager",
+        "UIKit",
+        "AudioKit"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -4,7 +4,7 @@
  * 用于加载多个 Addressables 资源（Union / Intersection）
  * 
  * 前缀：
- * - addru://key1;key2   : 多个 key 的并集 (MergeMode.Union)
+ * - addru://key1; key2   : 多个 key 的并集 (MergeMode.Union)
  * - addri://key1; key2   : 多个 key 的交集 (MergeMode.Intersection)
  * 
  * 使用示例：

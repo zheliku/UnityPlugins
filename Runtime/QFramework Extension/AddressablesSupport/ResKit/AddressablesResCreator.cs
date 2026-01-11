@@ -5,12 +5,12 @@
  * 完全兼容 ResLoader 接口，通过资源名前缀区分加载方式
  * 
  * 支持的资源名前缀：
- * - addr://key         : 加载单个资源 (AddressablesSingleRes)
- * - addru://k1,k2      : 多个 key 的并集 (AddressablesMultipleRes)
- * - addri://k1,k2      : 多个 key 的交集 (AddressablesMultipleRes)
+ * - addr://key         : 加载单个资源或场景 (AddressablesSingleRes，自动检测)
+ * - addru://k1; k2     : 多个 key 的并集 (AddressablesMultipleRes)
+ * - addri://k1; k2     : 多个 key 的交集 (AddressablesMultipleRes)
  * 
  * key/label 使用相同 API，无需区分
- * 多个 key 使用逗号分隔
+ * 多个 key 使用分号分隔
  * 
  * 注册方式：
  * 自动注册（通过 RuntimeInitializeOnLoadMethod）
@@ -23,14 +23,20 @@
  * var prefab = loader.LoadSync<GameObject>("addr://Prefabs/Player");
  * 
  * // 多资源加载（并集）
- * loader.Add2Load("addru://Enemies,Bosses", (ok, res) => {
+ * loader.Add2Load("addru://Enemies; Bosses", (ok, res) => {
  *     var all = (res as AddressablesMultipleRes).AllAssets;
  * });
  * 
  * // 多资源加载（交集）
- * loader.Add2Load("addri://Characters,Unlocked", (ok, res) => {
+ * loader.Add2Load("addri://Characters; Unlocked", (ok, res) => {
  *     var all = (res as AddressablesMultipleRes).AllAssets;
  * });
+ * 
+ * // 场景加载（自动检测）
+ * loader.LoadAddressableSceneSync("GameScene", LoadSceneMode.Additive);
+ * // 或者
+ * var res = loader.LoadResSync(ResSearchKeys.Allocate("addr://GameScene")) as AddressablesSingleRes;
+ * if (res.IsScene) res.LoadSceneSync(LoadSceneMode.Additive);
  * 
  * loader.Recycle2Cache();
  * 
@@ -103,7 +109,7 @@ namespace QFramework
         public static class Prefix
         {
             /// <summary>
-            /// 加载单个资源: addr://
+            /// 加载单个资源或场景（自动检测）: addr://
             /// </summary>
             public const string Single = "addr://";
 
@@ -138,11 +144,13 @@ namespace QFramework
         public IRes Create(ResSearchKeys resSearchKeys)
         {
             var assetName = resSearchKeys.AssetName;
+            // 使用 OriginalAssetName 保持 Addressables key 的大小写敏感
+            var originalAssetName = resSearchKeys.OriginalAssetName ?? assetName;
 
             // 多资源：Intersection（交集）
             if (assetName.StartsWith(Prefix.Intersection))
             {
-                var keysPart = assetName.Substring(Prefix.Intersection.Length);
+                var keysPart = originalAssetName.Substring(Prefix.Intersection.Length);
                 var res = AddressablesMultipleRes.Allocate(assetName, Addressables.MergeMode.Intersection, keysPart);
                 res.AssetType = resSearchKeys.AssetType;
                 return res;
@@ -151,7 +159,7 @@ namespace QFramework
             // 多资源：Union（并集）
             if (assetName.StartsWith(Prefix.Union))
             {
-                var keysPart = assetName.Substring(Prefix.Union.Length);
+                var keysPart = originalAssetName.Substring(Prefix.Union.Length);
                 var res = AddressablesMultipleRes.Allocate(assetName, Addressables.MergeMode.Union, keysPart);
                 res.AssetType = resSearchKeys.AssetType;
                 return res;
@@ -159,7 +167,7 @@ namespace QFramework
 
             // 单资源
             {
-                var key = assetName.Substring(Prefix.Single.Length);
+                var key = originalAssetName.Substring(Prefix.Single.Length);
                 var res = AddressablesSingleRes.Allocate(assetName, key);
                 res.AssetType = resSearchKeys.AssetType;
                 return res;

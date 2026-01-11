@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.4.0] - 2026-01-12
+
+### Added
+
+1. 添加 QFramework Addressables 资源支持示例，展示如何在 Unity 6.x 版本中使用 QFramework Addressables 资源加载功能。
+    - ResKit
+        - AddressablesMultipleRes: 加载多个 Addressables 资源。
+        - AddressablesSingleRes: 加载单个 Addressables 资源。
+    - UIKit
+        - AddressablesPanelLoaderPool: 使用 Addressables 加载面板资源。
+    - AudioKit
+        - AddressablesAudioLoader: 使用 Addressables 加载音频资源。
+2. 更新 QFramework Addressables 资源支持文档，包含更多使用示例和注意事项。
+3. 添加插件管理器，方便用户在 Unity 编辑器中导入和卸载插件。
+
 ## [1.3.1] - 2026-01-11
 
 ### Added
