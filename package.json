@@ -1,6 +1,6 @@
 {
     "name": "com.zheliku.unityplugins",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "displayName": "Unity Plugins",
     "description": "常用插件的集合库",
     "unity": "2021.3",

@@ -97,7 +97,7 @@ namespace UnityPlugins.Editor
         {
             { "Odin Inspector", new[] { "Sirenix", "Odin Inspector", "OdinInspector" } },
             { "Console Pro", new[] { "ConsolePro", "Console Pro", "Editor Console Pro" } },
-            { "Script Inspector", new[] { "FlipbookGames", "Script Inspector", "ScriptInspector" } },
+            { "ScriptInspector 3", new[] { "FlipbookGames", "ScriptInspector", "ScriptInspector3" } },
             { "vFolders", new[] { "vFolders", "VFolders" } },
             { "vHierarchy", new[] { "vHierarchy", "VHierarchy" } },
             { "vInspector", new[] { "vInspector", "VInspector" } },
