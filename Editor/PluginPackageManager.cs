@@ -57,11 +57,18 @@ namespace UnityPlugins.Editor
     /// </summary>
     public class PluginPackageManager : EditorWindow
     {
-        // 路径配置
-        private static string SamplesPath => Path.GetFullPath(
-            Path.Combine(Application.dataPath, "../Packages/UnityPlugins/Samples~"));
-        private static string PluginsPath => Path.Combine(Application.dataPath, "Plugins");
+        // 路径配置 - 使用统一的路径工具
+        private static string SamplesPath => PackagePathUtility.SamplesPath;
+        private static string PluginsPath => PackagePathUtility.PluginsPath;
         private const string IMPORT_RECORD_KEY = "PluginPackageManager_ImportRecords";
+
+        /// <summary>
+        /// 强制刷新 Samples 路径缓存
+        /// </summary>
+        public static void RefreshSamplesPathCache()
+        {
+            PackagePathUtility.RefreshCache();
+        }
 
         // 插件列表
         private List<PluginPackageInfo> _packages = new List<PluginPackageInfo>();
@@ -118,6 +125,8 @@ namespace UnityPlugins.Editor
 
         private void OnEnable()
         {
+            // 强制刷新路径缓存，确保使用最新路径
+            RefreshSamplesPathCache();
             RefreshPackageList();
         }
 
@@ -262,7 +271,31 @@ namespace UnityPlugins.Editor
             }
             else if (_packages.Count == 0)
             {
-                EditorGUILayout.HelpBox($"未找到插件包。\n请确保 Samples~ 文件夹存在：\n{SamplesPath}", MessageType.Warning);
+                string currentPath = SamplesPath;
+                bool pathExists = Directory.Exists(currentPath);
+
+                string message = "未找到插件包。\n\n";
+                message += $"当前检测路径：\n{currentPath}\n\n";
+                message += $"路径状态：{(pathExists ? "✓ 存在" : "✗ 不存在")}\n\n";
+
+                if (!pathExists)
+                {
+                    message += "可能的原因：\n";
+                    message += "1. 包中不包含 Samples~ 文件夹\n";
+                    message += "2. Git LFS 未正确配置，大文件未下载\n";
+                    message += "3. 包安装不完整\n\n";
+                    message += "解决方案：\n";
+                    message += "点击下方按钮刷新路径或手动检查包完整性";
+                }
+
+                EditorGUILayout.HelpBox(message, MessageType.Warning);
+
+                // 添加刷新按钮
+                if (GUILayout.Button("刷新路径检测", GUILayout.Height(25)))
+                {
+                    RefreshSamplesPathCache();
+                    RefreshPackageList();
+                }
             }
             else
             {

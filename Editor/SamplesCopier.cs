@@ -24,11 +24,42 @@ namespace UnityPlugins.Editor
     /// </summary>
     public static class SamplesCopier
     {
-        // 源文件夹路径（Assets 下的 Samples）
-        private static string SourcePath => Path.GetFullPath(Path.Combine(Application.dataPath, "UnityPlugins/Samples"));
-        
-        // 目标文件夹路径（Packages 下的 Samples~）
-        private static string DestinationPath => Path.GetFullPath(Path.Combine(Application.dataPath, "../Packages/UnityPlugins/Samples~"));
+        // 源文件夹路径（Assets 下的 Samples，通过包显示名称自动获取）
+        private static string SourcePath
+        {
+            get
+            {
+                // 尝试使用包显示名称作为 Assets 下的文件夹名
+                string displayName = PackagePathUtility.PackageDisplayName;
+                if (!string.IsNullOrEmpty(displayName))
+                {
+                    string path = Path.GetFullPath(Path.Combine(Application.dataPath, displayName, "Samples"));
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+                }
+
+                // 备用：使用包名的最后一段
+                string packageName = PackagePathUtility.PackageName;
+                if (!string.IsNullOrEmpty(packageName))
+                {
+                    string[] parts = packageName.Split('.');
+                    string folderName = parts[parts.Length - 1];
+                    string path = Path.GetFullPath(Path.Combine(Application.dataPath, folderName, "Samples"));
+                    if (Directory.Exists(path))
+                    {
+                        return path;
+                    }
+                }
+
+                // 最后备用
+                return Path.GetFullPath(Path.Combine(Application.dataPath, "UnityPlugins/Samples"));
+            }
+        }
+
+        // 目标文件夹路径（使用统一路径工具）
+        private static string DestinationPath => PackagePathUtility.SamplesPath;
 
         [MenuItem("Tools/UnityPlugins/Copy Samples to Package", priority = 100)]
         public static void CopySamplesToPackage()
@@ -78,7 +109,7 @@ namespace UnityPlugins.Editor
         /// <param name="copiedCount">已复制文件计数</param>
         /// <param name="skippedCount">跳过的 .meta 文件计数</param>
         /// <param name="createdDirCount">创建的目录计数</param>
-        private static void CopyDirectoryContents(string sourceDir, string destDir, 
+        private static void CopyDirectoryContents(string sourceDir, string destDir,
             ref int copiedCount, ref int skippedCount, ref int createdDirCount)
         {
             // 获取源目录中的所有文件
@@ -86,7 +117,7 @@ namespace UnityPlugins.Editor
             foreach (string filePath in files)
             {
                 string fileName = Path.GetFileName(filePath);
-                
+
                 // 跳过 .meta 文件（Unity 特有的元数据文件，Samples~ 不需要）
                 if (fileName.EndsWith(".meta", StringComparison.OrdinalIgnoreCase))
                 {
@@ -103,7 +134,7 @@ namespace UnityPlugins.Editor
                 }
 
                 string destFilePath = Path.Combine(destDir, fileName);
-                
+
                 // 复制文件（覆盖已存在的文件）
                 File.Copy(filePath, destFilePath, overwrite: true);
                 copiedCount++;
