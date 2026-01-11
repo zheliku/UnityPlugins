@@ -1,8 +1,15 @@
 # Changelog
 
-## [1.3.0] - 2026-01-12
+## [1.3.1] - 2026-01-11
 
 ### Added
+
+1. 添加 QFramework Addressables 资源支持文档，指导用户如何在 Unity 6.x 版本中正确导入和使用 QFramework。
+
+## [1.3.0] - 2026-01-11
+
+### Added
+
 1. 添加 QFramework Addressables 资源支持，包含多个资源加载和单个资源加载功能
     - AddressablesMultipleRes: 支持同时加载多个 Addressables 资源。
     - AddressablesSingleRes: 支持加载单个 Addressables 资源。
