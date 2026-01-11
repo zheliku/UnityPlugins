@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0] - 2026-01-12
+
+### Added
+1. 添加 QFramework Addressables 资源支持，包含多个资源加载和单个资源加载功能
+    - AddressablesMultipleRes: 支持同时加载多个 Addressables 资源。
+    - AddressablesSingleRes: 支持加载单个 Addressables 资源。
+
+
 ## [1.2.2] - 2026-01-11
 
 ### Added

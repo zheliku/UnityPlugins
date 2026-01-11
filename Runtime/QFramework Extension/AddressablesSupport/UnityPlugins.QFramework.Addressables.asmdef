@@ -1,0 +1,23 @@
+{
+    "name": "UnityPlugins.QFramework.Addressables",
+    "rootNamespace": "",
+    "references": [
+        "QFramework",
+        "QFramework.CoreKit",
+        "ResKit",
+        "Unity.Addressables",
+        "Unity.ResourceManager"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "QFRAMEWORK_RESKIT",
+        "ADDRESSABLES_SUPPORT"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
