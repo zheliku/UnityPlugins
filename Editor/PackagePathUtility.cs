@@ -230,11 +230,7 @@ namespace UnityPlugins.Editor
         /// 从 JSON 字符串中提取值（简单实现，避免依赖）
         /// </summary>
         private static string ExtractJsonValue(string json, string key)
-        {
-            // 查找 "key": "value" 或 "key":"value"
-            string pattern1 = $"\"{key}\"\\s*:\\s*\"";
-            int startIndex = -1;
-            
+        {            
             // 手动查找
             string searchKey = $"\"{key}\"";
             int keyIndex = json.IndexOf(searchKey, StringComparison.Ordinal);

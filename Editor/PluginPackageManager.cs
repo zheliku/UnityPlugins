@@ -1142,6 +1142,7 @@ namespace UnityPlugins.Editor
         {
             "Plugins",
             "Editor",
+            "Scripts",
             "Resources",
             "StreamingAssets",
             "Gizmos",
