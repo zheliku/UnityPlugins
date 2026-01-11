@@ -267,8 +267,10 @@ namespace QFramework
             // 释放场景
             if (mSceneHandle.IsValid())
             {
-                // 检查是否是最后一个场景，如果是则不卸载（Unity 不允许卸载最后一个场景）
-                if (SceneManager.sceneCount > 1)
+                var sceneToUnload = SceneInstance.Scene;
+
+                // 检查场景是否有效、已加载，且不是最后一个场景（Unity 不允许卸载最后一个场景）
+                if (sceneToUnload.IsValid() && sceneToUnload.isLoaded && SceneManager.sceneCount > 1)
                 {
                     Addressables.UnloadSceneAsync(mSceneHandle);
                 }

@@ -88,7 +88,7 @@ namespace UnityPlugins.Editor
 
                 string message = $"复制完成！\n\n" +
                                  $"复制文件数：{copiedCount}\n" +
-                                 $"跳过 .meta 文件数：{skippedCount}\n" +
+                                 $"统计 .meta 文件数：{skippedCount}\n" +
                                  $"创建文件夹数：{createdDirCount}";
 
                 Debug.Log($"[SamplesCopier] {message.Replace("\n\n", " ").Replace("\n", ", ")}");
@@ -107,7 +107,7 @@ namespace UnityPlugins.Editor
         /// <param name="sourceDir">源目录</param>
         /// <param name="destDir">目标目录</param>
         /// <param name="copiedCount">已复制文件计数</param>
-        /// <param name="skippedCount">跳过的 .meta 文件计数</param>
+        /// <param name="skippedCount">统计的 .meta 文件计数</param>
         /// <param name="createdDirCount">创建的目录计数</param>
         private static void CopyDirectoryContents(string sourceDir, string destDir,
             ref int copiedCount, ref int skippedCount, ref int createdDirCount)
@@ -118,11 +118,11 @@ namespace UnityPlugins.Editor
             {
                 string fileName = Path.GetFileName(filePath);
 
-                // 跳过 .meta 文件（Unity 特有的元数据文件，Samples~ 不需要）
+                // 统计 .meta 文件（Unity 特有的元数据文件）
                 if (fileName.EndsWith(".meta", StringComparison.OrdinalIgnoreCase))
                 {
                     skippedCount++;
-                    continue;
+                    // continue;
                 }
 
                 // 确保目标目录存在
