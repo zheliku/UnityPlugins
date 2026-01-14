@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0] - 2026-01-14
+
+### Added
+
+1. 分出 QFramework With Addressables 插件包，方便用户单独安装和更新 QFramework Addressables 支持功能。
+2. 主页添加安装地址
+
 ## [1.4.3] - 2026-01-12
 
 ### Added

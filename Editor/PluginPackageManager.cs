@@ -29,16 +29,16 @@ namespace UnityPlugins.Editor
     [Serializable]
     public class PluginPackageInfo
     {
-        public string Name;                    // 插件名称（从文件名提取）
-        public string DisplayName;             // 显示名称
-        public string Version;                 // 版本号
-        public string Category;                // 分类
-        public string FilePath;                // .unitypackage 文件路径
-        public string RelativePath;            // 相对路径
-        public bool IsSelected;                // 是否被选中
+        public string Name;                     // 插件名称（从文件名提取）
+        public string DisplayName;              // 显示名称
+        public string Version;                  // 版本号
+        public string Category;                 // 分类
+        public string FilePath;                 // .unitypackage 文件路径
+        public string RelativePath;             // 相对路径
+        public bool IsSelected;                 // 是否被选中
         public PluginImportStatus ImportStatus; // 导入状态
-        public string InstalledPath;           // 已安装路径
-        public List<string> DetectionKeywords; // 用于检测的关键词
+        public string InstalledPath;            // 已安装路径
+        public List<string> DetectionKeywords;  // 用于检测的关键词
     }
 
     /// <summary>
