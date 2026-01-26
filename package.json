@@ -8,9 +8,7 @@
         "name": "zheliku",
         "email": "zheliku25@gmail.com"
     },
-    "dependencies": {
-        "com.unity.addressables": "2.3.16"
-    },
+    "dependencies": {},
     "samples": [
         {
             "displayName": "01. Editor Tool",
