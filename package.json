@@ -1,6 +1,6 @@
 {
     "name": "com.zheliku.unityplugins",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "displayName": "Unity Plugins",
     "description": "常用插件的集合库\n其他插件安装：\n1. UniTask：https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask\n2. QFrameworkWithAddressables：https://github.com/zheliku/Addressables-Support-for-QFramework.git?path=Assets/QFrameworkWithAddressables\n3. AI 编辑器集成插件：https://github.com/821869798/com.unifan.ides.git",
     "unity": "2021.3",
@@ -12,23 +12,13 @@
     "samples": [
         {
             "displayName": "01. Editor Tool",
-            "description": "编辑器增强\n1. Odin Inspector\n2. Console Pro\n3. v系列效率工具：vFavorites 2；vFolders 2；vHierarchy 2；vInspector 2\n4. Script Inspector 3",
+            "description": "编辑器增强\n1. Odin Inspector\n2. Console Pro\n3. v系列效率工具：vFavorites 2；vFolders 2；vHierarchy 2；vInspector 2",
             "path": "Samples~/Editor Tool"
         },
         {
-            "displayName": "02. Frameworks & Architecture",
-            "description": "架构与事件\n1. QFramework\n2. Events Pro",
-            "path": "Samples~/Frameworks & Architecture"
-        },
-        {
-            "displayName": "03. Data Management",
-            "description": "数据管理\n1. BG Database\n2. Asset Inventory 3",
-            "path": "Samples~/Data Management"
-        },
-        {
-            "displayName": "04. XR",
-            "description": "XR 交互\n1. Auto Hand",
-            "path": "Samples~/XR"
+            "displayName": "02. Other",
+            "description": "其他\n1.Auto Hand\n2.BG Database\n3.Events Pro\n4. QFramework\n5.Shapes",
+            "path": "Samples~/Other"
         }
     ]
 }

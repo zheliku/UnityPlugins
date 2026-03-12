@@ -4,6 +4,27 @@
 
 ### Added
 
+1. 更新插件包：
+    - Editor Console Pro -> v3.981
+    - vFavorites 2 -> v2.1.15
+    - vFolders 2 -> v2.1.14
+    - vHierarchy 2 -> v2.1.9
+    - vInspector 2 -> v2.1.18
+    - Odin Inspector -> v4.0.1.4
+    - QFramework -> v1.0.245
+2. 添加插件包：
+    - Shapes
+
+### Deleted
+
+1. 删除部分插件包：
+    - Script Inspector 3
+    - Asset Inventory
+
+## [1.6.0] - 2026-01-26
+
+### Added
+
 1. 添加 Package2Folder 功能。
 
 ### Deleted
