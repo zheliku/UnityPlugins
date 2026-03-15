@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace CodeStage.PackageToFolder
+namespace UnityPlugins.Editor
 {
     /// <summary>
     /// 批量导入 Unity Package 的编辑器窗口
@@ -13,7 +13,7 @@ namespace CodeStage.PackageToFolder
     public class Package2FolderWindow : EditorWindow
     {
         private List<string> packagePaths = new List<string>();
-        private string targetFolderPath = "Assets";
+        private string targetFolderPath = "Assets/Plugins";
         private Vector2 packageListScrollPosition;
         private Vector2 windowScrollPosition;
         private bool silentMode = true;
@@ -413,10 +413,7 @@ namespace CodeStage.PackageToFolder
             if (silentMode)
             {
                 // 静默批量导入
-                foreach (var path in validPaths)
-                {
-                    Package2Folder.ImportPackageToFolder(path, targetFolderPath, false);
-                }
+                Package2Folder.ImportPackagesToFolderSilent(validPaths, targetFolderPath);
 
                 Debug.Log($"[Package2Folder] 已静默导入 {validPaths.Length} 个包到 {targetFolderPath}");
 

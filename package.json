@@ -1,6 +1,6 @@
 {
     "name": "com.zheliku.unityplugins",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "displayName": "Unity Plugins",
     "description": "常用插件的集合库\n其他插件安装：\n1. UniTask：https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask\n2. QFrameworkWithAddressables：https://github.com/zheliku/Addressables-Support-for-QFramework.git?path=Assets/QFrameworkWithAddressables\n3. AI 编辑器集成插件：https://github.com/821869798/com.unifan.ides.git",
     "unity": "2021.3",
