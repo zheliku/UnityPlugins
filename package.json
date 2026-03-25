@@ -1,6 +1,6 @@
 {
     "name": "com.zheliku.unityplugins",
-    "version": "1.7.1",
+    "version": "1.7.2",
     "displayName": "Unity Plugins",
     "description": "常用插件的集合库\n其他插件安装：\n1. UniTask：https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask\n2. QFrameworkWithAddressables：https://github.com/zheliku/Addressables-Support-for-QFramework.git?path=Assets/QFrameworkWithAddressables\n3. AI 编辑器集成插件：https://github.com/821869798/com.unifan.ides.git",
     "unity": "2021.3",
@@ -17,7 +17,7 @@
         },
         {
             "displayName": "02. Other",
-            "description": "其他\n1.Auto Hand\n2.BG Database\n3.Events Pro\n4. QFramework\n5.Shapes",
+            "description": "其他\n1.Auto Hand\n2.BG Database\n3.Events Pro\n4.QFramework\n5.Shapes\n6.Proxima Inspector",
             "path": "Samples~/Other"
         }
     ]

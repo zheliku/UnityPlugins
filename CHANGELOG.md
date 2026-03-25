@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.2] - 2026-03-26
+
+### Added
+
+1. 加入插件包：
+    - Proxima Inspector
+
 ## [1.7.1] - 2026-03-15
 
 ### Fixed
