@@ -1,8 +1,8 @@
 {
     "name": "com.zheliku.unityplugins",
-    "version": "1.7.2",
+    "version": "1.8.0",
     "displayName": "Unity Plugins",
-    "description": "常用插件的集合库\n其他插件安装：\n1. UniTask：https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask\n2. QFrameworkWithAddressables：https://github.com/zheliku/Addressables-Support-for-QFramework.git?path=Assets/QFrameworkWithAddressables\n3. AI 编辑器集成插件：https://github.com/821869798/com.unifan.ides.git",
+    "description": "常用插件的集合库。\n其他插件安装：\n1. MCPForUnity：https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#main\n2. NuGetForUnity：https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
     "unity": "2021.3",
     "author": {
         "name": "zheliku",
@@ -11,13 +11,18 @@
     "dependencies": {},
     "samples": [
         {
-            "displayName": "01. Editor Tool",
-            "description": "编辑器增强\n1. Odin Inspector\n2. Console Pro\n3. v系列效率工具：vFavorites 2；vFolders 2；vHierarchy 2；vInspector 2",
+            "displayName": "01. Art",
+            "description": "美术资源\n1. Shapes v4.5.1",
+            "path": "Samples~/Art"
+        },
+        {
+            "displayName": "02. Editor Tool",
+            "description": "编辑器增强工具\n1. Editor Console Pro v3.981\n2. EventsPro v1.1.0\n3. Odin Inspector and Serializer v4.0.2.1\n4. vTools (vFavorites, vFolders, vHierarchy, vInspector, vTabs)",
             "path": "Samples~/Editor Tool"
         },
         {
-            "displayName": "02. Other",
-            "description": "其他\n1.Auto Hand\n2.BG Database\n3.Events Pro\n4.QFramework\n5.Shapes\n6.Proxima Inspector",
+            "displayName": "03. Other",
+            "description": "其他\n1. Auto Hand - VR Interaction v4.0.4\n2. BG Database v1.9.3\n3. Framework v1.0.245\n4. Proxima Runtime Inspector Console v1.6.0",
             "path": "Samples~/Other"
         }
     ]
